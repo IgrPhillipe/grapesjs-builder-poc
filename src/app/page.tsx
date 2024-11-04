@@ -18,7 +18,6 @@ import blocksFlexbox from "grapesjs-blocks-flexbox";
 import tooltip from "grapesjs-tooltip";
 import customCode from "grapesjs-custom-code";
 import Link from "next/link";
-import { runLighthouse } from "@/actions/lighthouse";
 
 export default function EditorPage() {
   const [editor, setEditor] = useState<Editor>();
@@ -115,13 +114,6 @@ export default function EditorPage() {
         <Link href="/template" className="bg-white text-black p-4 rounded-md">
           Render page
         </Link>
-
-        <button
-          className="bg-white text-black p-4 rounded-md"
-          onClick={runLighthouse}
-        >
-          Generate report
-        </button>
       </div>
     </div>
   );
